@@ -1,11 +1,15 @@
 // Node object
 // queue [1,2,3,4,5]
-// node1 -> data
-// node1 => data->1
-// node2 => data->2
+// node data->int
 
-// node1->next = node2->data
-// node1->next->next = node3
+// node1 => int data = 1
+// node2 => int data = 2
+// node1 => next = node2 // prev
+//
+// node1.next.next = node3
+
+
+// node1    node2
 
 #include <iostream>
 
@@ -22,13 +26,16 @@ class Node {
         next = NULL;
         prev = NULL;
     }
-    Node();
+    Node(){
+        next = NULL;
+        prev = NULL;
+    }
 };
 
 int main () {
-    Node *node1 = new Node(6);
+    Node *node1 = new Node(1);
     Node *node2;
-    node2->data = 5;
+    node2->data = 2;
 
     node1->next = node2;
     node2->prev = node1;

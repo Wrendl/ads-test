@@ -40,6 +40,7 @@ class LinkedList {
 
     void push_back(int data) {
         Node *node = new Node(data);
+
         if (tail == NULL) {
             tail = node;
             head = node;
@@ -48,6 +49,12 @@ class LinkedList {
             node->prev = tail;
             tail = node;
         }
+
+        // 1 -> head, tail
+        // 2 ===  1.next -> 2, 2.prev -> 1, 2->tail
+        // 1 -> head, 2 -> tail
+        // 3 === 2.next -> 3, 3.prev -> 2, 3->tail
+        // 1->head, 2, 3->tail
     } 
 
     void push_front(int data) {
@@ -60,6 +67,9 @@ class LinkedList {
             node->next = head;
             head = node;
         }
+        //1, 2, 3
+        //0 === 1.prev = 0, 0.next = 1, 0->head
+        // 0-> head, 1, 2, 3-tail
     }
 
     void delete_element(Node *node) {
@@ -71,6 +81,11 @@ class LinkedList {
             node->prev->next = node->next;
             node->next->prev = node->prev;
         }
+        // 1, 2, 3;
+        // node2 = 2;
+        // node1.next = node2.next
+        // 3.prev = node2.prev
+
     }
 
     void insert(Node *node1, Node *node2) {
@@ -82,6 +97,8 @@ class LinkedList {
             node1->next = node2;
             node2->prev = node1;
         }
+        // 1 -> <-[] -> <- 3 -> 2
+        // 3.prev = 2
     }
 
     Node* search(int data) {
