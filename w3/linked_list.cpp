@@ -93,14 +93,19 @@ class LinkedList {
         else {
             Node *top = head;
             int cnt = 0;
-            while (ind!=cnt){
+            while (ind!=cnt && top->next!=NULL){
                 top = top->next;
                 cnt++;
             }
-            top->next->prev = node;
-            node->next = top->next;
-            top->next = node;
-            top->prev = top;
+            if (top->next==NULL) {
+                push_back(node->data);
+            }
+            else{
+                top->next->prev = node;
+                node->next = top->next;
+                top->next = node;
+                top->prev = top;
+            }
         }
     }
 
@@ -131,7 +136,7 @@ int main() {
     ll->print();
 
     Node *node = new Node(6);
-    ll->insert_by_ind(node, 2);
+    ll->insert_by_ind(node, 5);
     ll->print();
 
     // ll->pop_front();
