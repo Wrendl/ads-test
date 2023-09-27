@@ -11,7 +11,6 @@ int binarySearch(int arr[], int l, int r, int x) {
  
         if (arr[m] < x)
             l = m + 1;
- 
         else
             r = m - 1;
     }
@@ -21,8 +20,8 @@ int binarySearch(int arr[], int l, int r, int x) {
 int main() {
     int arr[] = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
     int x = 11;
-    int n = sizeof(arr) / sizeof(arr[0]);
-    int result = binarySearch(arr, 0, n - 1, x);
+    int sz = sizeof(arr) / sizeof(arr[0]);
+    int result = binarySearch(arr, 0, sz - 1, x);
     if (result == -1) cout << "Element is not present in array";
     else cout << "Element is present at index " << result;
     return 0;

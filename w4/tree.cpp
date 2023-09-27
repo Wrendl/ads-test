@@ -52,7 +52,8 @@ int main() {
     t->root = t->insert_node(t->root, 12);
     t->root = t->insert_node(t->root, 22);
 
-    cout << t->root->right->right->data<<endl;
+    cout<<t->root->right->left->data<<endl;
     cout<<t->root->left->right->right->data;
+
     return 0;
 }
