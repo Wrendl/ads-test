@@ -25,9 +25,12 @@ int main () {
     delete node2;
 
     cout<<node->data<<endl;
-    cout<<node->next->data<<endl;
-    cout<<node2->next->data<<endl;
+    cout<<node2->data<<endl;
     cout<<node3->data<<endl;
+    cout<<node2->next->data<<endl;
+    // cout<<node->next->data<<endl;
+    // cout<<node2->next->data<<endl;
+    // cout<<node3->data<<endl;
 
-    cout<<node->prev;
+    // cout<<node->prev;
 }

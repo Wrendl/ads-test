@@ -28,6 +28,12 @@ class Tree {
         return node;
     }
 
+
+
+
+
+
+
     void inOrder(Node *node){
         if(!node) return;
 
@@ -36,6 +42,15 @@ class Tree {
         inOrder(node->right);
     }
 
+
+
+
+
+
+
+
+
+
     Node *search(Node *root, int key){
         if(!root || root->data == key) return root;
 
@@ -43,6 +58,12 @@ class Tree {
 
         return search(root->right, key);
     }
+
+
+
+
+
+
 
     Node  *delete_node(Node *root, int key){
         if(!root) return root;
@@ -97,11 +118,16 @@ class Tree {
 
 int main() {
     Tree *t = new Tree();
-    Node *root = t->insert_node(NULL, 10);
+    Node *root = t->insert_node(NULL, 8);
 
-    t->insert_node(root, 7);
-    t->insert_node(root, 20);
+    t->insert_node(root, 3);
     t->insert_node(root, 6);
+    t->insert_node(root, 1);
+    t->insert_node(root, 4);
+    t->insert_node(root, 7);
+    t->insert_node(root, 10);
+    t->insert_node(root, 14);
+    t->insert_node(root, 13);
 
     t->inOrder(root);
     cout<<endl;
