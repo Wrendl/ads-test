@@ -84,7 +84,6 @@ class LinkedList {
             node2->prev = node1;
         }
     }
-
     
     void insert_by_ind(Node *node, int ind) {
         if (ind == 0){
