@@ -28,12 +28,6 @@ class Tree {
         return node;
     }
 
-
-
-
-
-
-
     void inOrder(Node *node){
         if(!node) return;
 
@@ -42,15 +36,6 @@ class Tree {
         inOrder(node->right);
     }
 
-
-
-
-
-
-
-
-
-
     Node *search(Node *root, int key){
         if(!root || root->data == key) return root;
 
@@ -58,12 +43,6 @@ class Tree {
 
         return search(root->right, key);
     }
-
-
-
-
-
-
 
     Node  *delete_node(Node *root, int key){
         if(!root) return root;
