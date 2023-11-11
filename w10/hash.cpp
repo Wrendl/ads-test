@@ -3,7 +3,6 @@
 
 using namespace std;
 
-
 int calc_hash(string s) {
     int h = 0;
     int p = 31;
@@ -25,3 +24,5 @@ int main() {
 
     return 0;
 }
+
+// 4 lab9

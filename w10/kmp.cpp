@@ -30,7 +30,7 @@ int main() {
 
     for (int i = 0; i < s.size(); i++) {
         if (p[i] == b_sz) {
-            cout << "substr is found at index " << i - 2*b_sz;
+            cout << "substr is found at index " << i - 2*b_sz << endl;
         }
     }
     
