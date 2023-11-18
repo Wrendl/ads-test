@@ -16,13 +16,18 @@ int calc_hash(string s) {
 }
 
 int main() {
-    string s;
-    cin >> s;
+    // string s;
+    // cin >> s;
 
-    int hash_s = calc_hash(s);
-    cout<<hash_s;
+    // int hash_s = calc_hash(s);
+    // cout<<hash_s;
+
+    char a = 'a';
+    cout<<int(a); 
 
     return 0;
 }
 
-// 4 lab9
+
+// fdhsjkgfhdjklg = 9999
+// 
