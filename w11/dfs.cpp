@@ -35,7 +35,7 @@ int main() {
     for (int i = 0; i < n; i++)
         if (used[i] == 0) {
             cnt++;
-            dfs(i);
+            dfs(i, cnt);
         }
     cout << cnt;
     return 0;
