@@ -16,7 +16,7 @@ void bfs(int x) {
     used[x] = 1;
     while (!q.empty()) {
         x = q.front();
-        // cout<<x<<endl;
+        cout<<x<<endl;
         for (int i = 0; i < g[x].size(); i++) {
             y = g[x][i];
             if (used[y] == 0) {
@@ -36,14 +36,11 @@ int main() {
         g[x].push_back(y);
         g[y].push_back(x);
     }
-    // for (int t = 0; t < n; t++) {
-    //     if (used[t] == 0)
-    //         bfs(t);
-    // }
+    cout<<endl;
     bfs(0);
 
-    for (int i = 0; i < n; i++)
-        cout << i << " -> " << d[i] << endl;
+    // for (int i = 0; i < n; i++)
+    //     cout << i << " -> " << d[i] << endl;
 
     return 0;
 }
