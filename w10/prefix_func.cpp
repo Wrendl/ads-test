@@ -38,6 +38,5 @@ int main() {
 
 // b c # a b c a b a
 // 0 0 0 0 1 2 0 1 0
-
-// a a b # a b c a  a ab a
+// a a b # a b c a a a b a
 // 0 1 0 0 1 0 0 1 2 2 3 1

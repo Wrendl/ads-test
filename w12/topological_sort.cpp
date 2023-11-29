@@ -4,7 +4,7 @@
 
 using namespace std;
 
-int color[101];
+int color[101]; // 0 1 2
 int a[101][101];
 int n, m;
 vector<int> ans;
